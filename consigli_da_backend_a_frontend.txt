@@ -1,0 +1,25 @@
+import streamlit as st
+import backend as be
+
+#per ora proviamo a non mettere questa riga
+#@st.experimental_singleton
+
+# funzione da invocare all'inizio per creare connessione al database
+supabase=be.init_connection()
+
+
+#pagina iniziale login (username e password vengono inseriti nel session state)
+st.session_state['Username'] = st.text_input("Username")
+st.session_state['Password'] = st.text_input("Password")
+
+
+#funzione da invocare quando si preme il tasto login
+#se username e password sono corretti ritorna true altrimenti false
+be.login(supabase)
+
+#pagina per fare signin 
+#(prima di inserire in session state accertarsi che le stringhe non siano vuote o whitespace
+#forse si può usare isspace())
+st.session_state['Username'] = st.text_input("Username")
+st.session_state['Password'] = st.text_input("Password")
+st.session_state['Mail']=st.text_input("Mail")
