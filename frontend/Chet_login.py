@@ -24,11 +24,12 @@ placeholder = st.empty()
 
 with placeholder.container():
     st.title("CHET")
-    st.session_state['Username'] = st.text_input("Username")
-    st.session_state['Password'] = st.text_input("Password", type="password")
-    b1 = st.button('LOGIN')
-    st.write('Non sei ancora registrato?')
-    b2 = st.button ('SIGN IN')
+    with st.form("login_form"):      
+        st.session_state['Username'] = st.text_input("Username:")
+        st.session_state['Password'] = st.text_input("Password:", type="password")
+        b1 = st.form_submit_button("LOGIN")
+        st.write('Non sei ancora registrato?')
+        b2 = st.form_submit_button("SIGN IN")
 
 if b1:
     check_login()
