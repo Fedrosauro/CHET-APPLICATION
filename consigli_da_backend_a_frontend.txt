@@ -38,6 +38,6 @@ st.session_state['Message'] = st.text_input("Message")
 
 #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
 #come qui
-be.send_message (supabase, st.session_state['Message'], st.session_state['Username'], str(datetime.now().strftime(" %H:%M")))
+be.send_message (supabase, st.session_state['Message'], st.session_state['Username'], str(datetime.now().strftime(" %H:%M:%S")))
 st.session_state['Message'] = ""
 
