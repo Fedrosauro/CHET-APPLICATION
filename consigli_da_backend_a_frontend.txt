@@ -30,3 +30,14 @@ st.session_state['Mail']=st.text_input("Mail")
 #ritorna true se le credenziali sono state inserite correttamente (fate che si passa alla pagina di chat)
 #ritorna false se un campo è vuoto o contiene spazi oppure se l'username è già occupato (fate che esce un messaggio d'errore)
 be.signin(supabase)
+
+#pagina per inviare messaggi
+#inizializzare la voce 'Message' su session state come qui
+st.session_state['Message'] = ""
+st.session_state['Message'] = st.text_input("Message")
+
+#quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
+#come qui
+be.send_message (supabase, st.session_state['Message'], st.session_state['Username'], str(datetime.now().strftime(" %H:%M")))
+st.session_state['Message'] = ""
+
