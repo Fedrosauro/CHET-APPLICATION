@@ -36,3 +36,8 @@ def signin(supabase_conn, username, password, mail):
 def send_message(supabase_conn, username, message, time):
     supabase_conn.table("Messages").insert({"Content":message, "User":username, "Time":time}).execute()
 ##############################################################################
+
+############################ PRINT DATAFRAME FUNC ############################
+def get_Database_dataFrame(supabase_conn):
+    return pd.DataFrame(supabase_conn.table("Messages").select("*").execute().data)
+##############################################################################
