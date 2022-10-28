@@ -17,7 +17,7 @@ st.set_page_config( page_title="CHET", layout="centered")
 def check_login():
     if be.login(supabase):
        placeholder.empty() 
-       webbrowser.open("https://www.google.it")
+       webbrowser.open("https://www.google.it?Username=st.session_state['Username']")
     else:
         st.error('Username e/o password errati', icon="🚨")
       
@@ -32,7 +32,7 @@ with placeholder.container():
         b1 = st.form_submit_button("LOGIN")
         st.write('Non sei ancora registrato?')
         b2 = st.write(f'''
-                      <a target="_self" href="https://www.google.it?Username=st.session_state['Username']"> 
+                      <a target="_self" href="https://www.google.it"> 
                       <button>
                       SIGN IN
                       </button>
