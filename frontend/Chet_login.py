@@ -12,7 +12,7 @@ import webbrowser
 
 st.set_page_config( page_title="CHET", layout="centered")
 
-# se credenziali giuste viene reindirizzato alla pagina di google per ora
+# se credenziali giuste viene reindirizzato alla pagina di google (per ora...poi si passerà alla chat)
 # se credenziali errate messaggio d'errore  
 def check_login():
     if be.login(supabase):
@@ -22,6 +22,8 @@ def check_login():
         st.error('Username e/o password errati', icon="🚨")
       
         
+# se preme su tasto sign in rediretto a google (per ora...poi si passerà alla pagina di sign in) 
+
 placeholder = st.empty()
 
 with placeholder.container():
