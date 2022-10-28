@@ -31,3 +31,8 @@ def signin(supabase_conn, username, password, mail):
     supabase_conn.table("Users").insert({"Username":username , "Password":password, "Mail":mail}).execute()
     return True
 ##############################################################################
+
+############################### SEND MESSAGE FUNC##############################
+def send_message(supabase_conn, username, message, time):
+    supabase_conn.table("Messages").insert({"Content":message, "User":username, "Time":time}).execute()
+##############################################################################
