@@ -9,25 +9,25 @@ def init_connection():
 #############################################################################
 
 ############################### LOGIN FUNCTION ##############################
-def login(supabase_conn):
+def login(supabase_conn, username, password):
     rows = supabase_conn.table("Users").select("*").execute()
     for row in rows.data:
-        if st.session_state["Username"] == row["Username"] and st.session_state["Password"] == row["Password"]:
+        if username == row["Username"] and password == row["Password"]:
             return True
     return False
 ##############################################################################
 
 ############################## SIGNIN FUNCTION ###############################
-def signin(supabase_conn):
+def signin(supabase_conn, username, password, mail):
     #check if username or password or mail are empty or contains only whitespaced
-    if st.session_state["Username"] == "" or ' ' in st.session_state["Username"] or st.session_state["Password"] == "" or ' ' in st.session_state["Password"] or st.session_state["Mail"] == "" or ' ' in st.session_state["Mail"]:
+    if username == "" or ' ' in username or password == "" or ' ' in password or mail == "" or ' ' in mail:
         return False
 
     rows = supabase_conn.table("Users").select("*").execute()
     for row in rows.data:
-        if st.session_state["Username"] == row["Username"]:
+        if username == row["Username"]:
             return False
 
-    supabase_conn.table("Users").insert({"Username":st.session_state["Username"] , "Password":st.session_state["Password"], "Mail":st.session_state["Mail"]}).execute()
+    supabase_conn.table("Users").insert({"Username":username , "Password":password, "Mail":mail}).execute()
     return True
 ##############################################################################
