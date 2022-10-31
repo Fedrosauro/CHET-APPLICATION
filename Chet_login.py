@@ -8,11 +8,28 @@ Created on Thu Oct 27 14:54:23 2022
 
 import streamlit as st
 import backend as be
-import webbrowser
+import base64
 
 supabase = be.init_connection()
 
 st.set_page_config( page_title="CHET", layout="centered")
+
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
 #funzione che reindirizza ad un url
 def nav_to(url):
@@ -31,7 +48,7 @@ def check_login():
         st.error('Username e/o password errati', icon="🚨")
 
 
-st.title("CHET")
+set_background('schLogin3.png')
 with st.form("my_form"):
      st.session_state['Username'] = st.text_input("Username:")
      st.session_state['Password'] = st.text_input("Password:", type="password")
