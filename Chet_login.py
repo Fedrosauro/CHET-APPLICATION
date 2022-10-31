@@ -14,13 +14,18 @@ supabase = be.init_connection()
 
 st.set_page_config( page_title="CHET", layout="centered")
 
+#funzione che reindirizza ad un url
+def nav_to(url):
+    nav_script = """
+        <meta http-equiv="refresh" content="0; url='%s'">
+    """ % (url)
+    st.write(nav_script, unsafe_allow_html=True)
+
 # se credenziali giuste viene reindirizzato alla pagina di google (per ora...poi si passerà alla chat)
 # se credenziali errate messaggio d'errore
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
-       placeholder.empty()
-       #Questo è da cambiare
-       webbrowser.open("https://www.google.it?Username=st.session_state['Username']")
+        nav_to("https:/www.google.it")   
     else:
         st.error('Username e/o password errati', icon="🚨")
 
