@@ -41,15 +41,9 @@ with placeholder.container():
         st.session_state['Password'] = st.text_input("Password:", type="password")
         b1 = st.form_submit_button("LOGIN")
         st.write('Non sei ancora registrato?')
-        b2 = st.markdown(f'''
-                      <a href="XXXXXXX?">
-                      <button>
-                      SIGN IN
-                      </button>
-                      </a>
-                      ''',
-                      unsafe_allow_html=True
-                      )
+        b2 = st.form_submit_button("SIGN IN")
 
 if b1:
     check_login()
+if b2:
+    nav_to("url_pagina_sign_in")
