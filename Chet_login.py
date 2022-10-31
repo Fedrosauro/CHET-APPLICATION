@@ -19,13 +19,13 @@ st.set_page_config( page_title="CHET", layout="centered")
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
        placeholder.empty()
-       webbrowser.open("https://www.google.it?Username=st.session_state['Username']")
+       with placeholder.container():
+           webbrowser.open("https://www.google.it?Username=st.session_state['Username']")
     else:
         st.error('Username e/o password errati', icon="🚨")
 
 
 # se preme su tasto sign in rediretto a google (per ora...poi si passerà alla pagina di sign in)
-webbrowser.open("https://www.google.it", new = 1)
 
 placeholder = st.empty()
 
