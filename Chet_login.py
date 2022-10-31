@@ -32,17 +32,13 @@ def check_login():
 
 # se preme su tasto sign in rediretto a google (per ora...poi si passerà alla pagina di sign in)
 
-placeholder = st.empty()
-
-with placeholder.container():
-    st.title("CHET")
-    with st.form("my_form"):
-        st.session_state['Username'] = st.text_input("Username:")
+st.title("CHET")
+with st.form("my_form"):
+    st.session_state['Username'] = st.text_input("Username:")
         st.session_state['Password'] = st.text_input("Password:", type="password")
         b1 = st.form_submit_button("LOGIN")
         st.write('Non sei ancora registrato?')
-        b2 = st.form_submit_button("SIGN IN")
-
+        b2 = st.form_submit_button("SIGN IN")        
 if b1:
     check_login()
 if b2:
