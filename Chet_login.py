@@ -25,7 +25,7 @@ def nav_to(url):
 # se credenziali errate messaggio d'errore
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
-        nav_to("https://fedrosauro-chet-application-chet-login-70edu3.streamlitapp.com/")   
+        nav_to("https://fedrosauro-prova-test-prova-database-lnwwqr.streamlitapp.com")   
     else:
         st.error('Username e/o password errati', icon="🚨")
 
