@@ -25,7 +25,7 @@ def nav_to(url):
 # se credenziali errate messaggio d'errore
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
-        nav_to("https:/www.google.it")   
+        nav_to("https://www.google.com/")   
     else:
         st.error('Username e/o password errati', icon="🚨")
 
