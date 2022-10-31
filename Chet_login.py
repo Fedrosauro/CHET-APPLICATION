@@ -49,10 +49,8 @@ def check_login():
 
 
 set_background('schLogin3.png')
-st.title("")
-st.header("")
-st.write("")
-st.write("")
+for i in range(4):
+    st.write("")
 
 with st.form("my_form"):
      st.session_state['Username'] = st.text_input("Username:")
