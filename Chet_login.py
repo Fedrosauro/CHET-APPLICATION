@@ -21,7 +21,8 @@ def nav_to(url):
     """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
-# se credenziali giuste viene reindirizzato alla pagina di google (per ora...poi si passerà alla chat)
+# funzione che:
+# se credenziali giuste reindirizza alla chat
 # se credenziali errate messaggio d'errore
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
@@ -29,8 +30,6 @@ def check_login():
     else:
         st.error('Username e/o password errati', icon="🚨")
 
-
-# se preme su tasto sign in rediretto a google (per ora...poi si passerà alla pagina di sign in)
 
 st.title("CHET")
 with st.form("my_form"):
