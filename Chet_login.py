@@ -11,6 +11,7 @@ import backend as be
 import webbrowser
 
 supabase = be.init_connection()
+webbrowser.open("https://www.google.com")
 
 st.set_page_config( page_title="CHET", layout="centered")
 
@@ -19,7 +20,7 @@ st.set_page_config( page_title="CHET", layout="centered")
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
        placeholder.empty()
-       webbrowser.open('https://www.google.com')
+       webbrowser.open("https://www.google.com")
     else:
         st.error('Username e/o password errati', icon="🚨")
 
