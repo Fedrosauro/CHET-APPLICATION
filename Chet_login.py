@@ -35,7 +35,7 @@ with placeholder.container():
         st.session_state['Password'] = st.text_input("Password:", type="password")
         b1 = st.form_submit_button("LOGIN")
         st.write('Non sei ancora registrato?')
-        b2 = st.markdown(f'''
+        b2 = st.write(f'''
                       <a target="_self" href="https://www.google.it">
                       <button>
                       SIGN IN
