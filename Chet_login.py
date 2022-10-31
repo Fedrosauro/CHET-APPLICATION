@@ -36,7 +36,7 @@ with placeholder.container():
         b1 = st.form_submit_button("LOGIN")
         st.write('Non sei ancora registrato?')
         b2 = st.write(f'''
-                      <a target="_self" href="https://www.google.it">
+                      <a href="https://www.google.it">
                       <button>
                       SIGN IN
                       </button>
