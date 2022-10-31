@@ -19,6 +19,7 @@ st.set_page_config( page_title="CHET", layout="centered")
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
        placeholder.empty()
+       #Questo è da cambiare
        webbrowser.open("https://www.google.it?Username=st.session_state['Username']")
     else:
         st.error('Username e/o password errati', icon="🚨")
@@ -35,8 +36,8 @@ with placeholder.container():
         st.session_state['Password'] = st.text_input("Password:", type="password")
         b1 = st.form_submit_button("LOGIN")
         st.write('Non sei ancora registrato?')
-        b2 = st.write(f'''
-                      <a href="https://fedrosauro-prova-test-prova-database-lnwwqr.streamlitapp.com/">
+        b2 = st.markdown(f'''
+                      <a href="XXXXXXX?">
                       <button>
                       SIGN IN
                       </button>
