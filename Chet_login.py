@@ -43,26 +43,19 @@ def nav_to(url):
 # se credenziali errate messaggio d'errore
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
-        nav_to("https://fedrosauro-prova-test-prova-database-lnwwqr.streamlitapp.com")   
+        nav_to("https://fedrosauro-prova-test-prova-database-lnwwqr.streamlitapp.com")
     else:
         st.error('Username e/o password errati', icon="🚨")
 
 
 set_background('schLogin3.png')
-st.title("")
-st.header("")
-st.write("")
-st.write("")
-st.write("")
-st.write("")
-st.write("")
-st.write("")
+
 with st.form("my_form"):
      st.session_state['Username'] = st.text_input("Username:")
      st.session_state['Password'] = st.text_input("Password:", type="password")
      b1 = st.form_submit_button("LOGIN")
      st.write('Non sei ancora registrato?')
-     b2 = st.form_submit_button("SIGN IN")           
+     b2 = st.form_submit_button("SIGN IN")
 if b1:
     check_login()
 if b2:
