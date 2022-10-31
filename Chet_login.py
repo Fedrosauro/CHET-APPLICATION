@@ -49,7 +49,7 @@ def check_login():
 
 
 set_background('schLogin3.png')
-for i in range(4):
+for i in range(7):
     st.write("")
 
 with st.form("my_form"):
