@@ -67,3 +67,11 @@ if b1:
     check_login()
 if b2:
     nav_to("url_pagina_sign_in")
+
+st.markdown("""
+        <style>
+               .block-container {
+                    padding-bottom: 0px;
+                }
+        </style>
+        """, unsafe_allow_html=True)
