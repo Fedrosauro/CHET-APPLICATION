@@ -8,7 +8,7 @@ Created on Thu Oct 27 14:54:23 2022
 
 import streamlit as st
 import backend as be
-import webbrowser as wb
+import webbrowser
 
 supabase = be.init_connection()
 
@@ -19,7 +19,7 @@ st.set_page_config( page_title="CHET", layout="centered")
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
        placeholder.empty()
-       wb.open("https://www.google.it?Username=st.session_state['Username']")
+       webbrowser.open("https://www.google.it?Username=st.session_state['Username']")
     else:
         st.error('Username e/o password errati', icon="🚨")
 
