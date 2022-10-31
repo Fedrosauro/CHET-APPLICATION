@@ -19,7 +19,7 @@ st.set_page_config( page_title="CHET", layout="centered")
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
        placeholder.empty()
-       webbrowser.open("https://www.google.com/")
+       webbrowser.open("http://www.google.com/")
     else:
         st.error('Username e/o password errati', icon="🚨")
 
