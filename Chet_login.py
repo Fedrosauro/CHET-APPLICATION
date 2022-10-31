@@ -54,7 +54,6 @@ st.header("")
 st.write("")
 st.write("")
 st.write("")
-st.write("")
 
 with st.form("my_form"):
      st.session_state['Username'] = st.text_input("Username:")
