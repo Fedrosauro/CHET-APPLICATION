@@ -25,7 +25,7 @@ def check_login():
 
 
 # se preme su tasto sign in rediretto a google (per ora...poi si passerà alla pagina di sign in)
-webbrowser.open("https://www.google.it")
+webbrowser.open("https://www.google.it", new = 1)
 
 placeholder = st.empty()
 
