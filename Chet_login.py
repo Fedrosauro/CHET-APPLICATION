@@ -61,7 +61,7 @@ with st.form("my_form"):
 if b1:
     check_login()
 if b2:
-    nav_to("url_pagina_sign_in")
+    nav_to("https://fedrosauro-chet-application-chet-signin-jaygim.streamlitapp.com/")
 
 st.markdown("""
         <style>
