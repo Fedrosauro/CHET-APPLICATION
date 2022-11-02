@@ -10,7 +10,7 @@ import Chet_login as cl
 
 #se passa il controllo si va alla chat
 #se non lo passa messaggio d'errore
-def check_signin:
+def check_signin():
     if be.signin(supabase):
         cl.nav_to("url_chat")
     else:
