@@ -74,27 +74,28 @@ if button:
 
 
 df= be.get_Database_dataFrame(supabase)
-for x in range(len(df.index)):
-    series = df.loc[x]
-    #messaget = series.at["User"] + "  \n" + series.at["Content"] + "  \n" + series.at["Time"]
-    #st.write(messaget)
-    #message(series.to_string(index=False, header=False))
-    #message(messaget)
-    change_color = "no_change"
-    if st.session_state["Username"] == series.at["User"]
-        change_color = "change"
+if not df.empty:
+    for x in range(len(df.index)):
+        series = df.loc[x]
+        #messaget = series.at["User"] + "  \n" + series.at["Content"] + "  \n" + series.at["Time"]
+        #st.write(messaget)
+        #message(series.to_string(index=False, header=False))
+        #message(messaget)
+        change_color = "no_change"
+        if st.session_state["Username"] == series.at["User"]:
+            change_color = "change"
 
-    message = '''
-        <div class = "container %s">
-          <div class = "user">
-              %s
-          </div>
-          <div class = "content">
-              %s
-          </div>
-          <div class = "time">
-              %s
-          </div>
-        </div>
-    ''' % (change_color, series.at["User"], series.at["Content"], series.at["Time"])
-    st.markdown(message, unsafe_allow_html=True)
+        message = '''
+            <div class = "container %s">
+              <div class = "user">
+                  %s
+              </div>
+              <div class = "content">
+                  %s
+              </div>
+              <div class = "time">
+                  %s
+              </div>
+            </div>
+        ''' % (change_color, series.at["User"], series.at["Content"], series.at["Time"])
+        st.markdown(message, unsafe_allow_html=True)
