@@ -54,16 +54,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 #if "Username" not in st.session_state:
-env_var = os.environ
 
-# Print the list of user's
-# environment variables
-print("User's Environment variable:")
-st.write((dict(env_var)))
-
-url = "https://www.w3schools.com/cssref?user=pippo"
-parsed = urlparse(url)
-st.session_state["Username"] = parse_qs(parsed.query)['user'][0]
+st.session_state["Username"] = st.experimental_get_query_params()
 st.write(st.session_state["Username"])
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
