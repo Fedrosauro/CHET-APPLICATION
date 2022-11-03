@@ -23,6 +23,7 @@ st.markdown("""
   padding: 5px;
   word-wrap: break-word;
   display: inline-block;
+  margin-bottom: 10px;
 }
 
 .user{
