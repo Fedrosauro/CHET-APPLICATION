@@ -53,7 +53,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 if "Username" not in st.session_state:
-    url = os.environ
+    url = "https://www.w3schools.com/cssref?user=pippo"
     parsed = urlparse(url)
     st.session_state["Username"] = urlparse.parse_qs(parsed.query)['user'][0]
 
