@@ -3,14 +3,16 @@ import pandas as pd
 from streamlit_chat import message
 import backend as be
 from streamlit_autorefresh import st_autorefresh
-
-# funzione da invocare all'inizio per creare connessione al database
-supabase=be.init_connection()
+import urlparse
 
 #funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
 #(così le azioni come la stampa dei messaggi vedono i database aggiornati)
 st_autorefresh(interval=1000, key="dataframerefresh")
 
+# funzione da invocare all'inizio per creare connessione al database
+supabase=be.init_connection()
+
+#CSS stuff
 st.markdown("""
 <style>
 .big-font {
@@ -38,8 +40,21 @@ st.markdown("""
   margin-top: 3px;
 }
 
+.change{
+    background-color: #37515F;
+}
+
+.no_change{
+    background-color: none;
+}
+
 </style>
 """, unsafe_allow_html=True)
+
+if "Username" not in st.session_state:
+    page_url = st.get_url()
+    parsed = urlparse.urlparse(url)
+    st.session_state["Username"] = urlparse.parse_qs(parsed.query)['user'][0]
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
@@ -65,8 +80,13 @@ for x in range(len(df.index)):
     #st.write(messaget)
     #message(series.to_string(index=False, header=False))
     #message(messaget)
+    change_color = "no_change"
+    if st.session_state["Username"] == series.at["User"]
+        change_color = "change"
+    ##37515F
+
     message = '''
-        <div class = "container">
+        <div class = "container %s">
           <div class = "user">
               %s
           </div>
@@ -77,5 +97,5 @@ for x in range(len(df.index)):
               %s
           </div>
         </div>
-    ''' % (series.at["User"], series.at["Content"], series.at["Time"])
+    ''' % (change_color, series.at["User"], series.at["Content"], series.at["Time"])
     st.markdown(message, unsafe_allow_html=True)

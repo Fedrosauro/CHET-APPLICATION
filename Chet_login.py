@@ -23,10 +23,10 @@ def set_background(png_file):
     bin_str = get_base64(png_file)
     page_bg_img = '''
     <style>
-    .stApp {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    }
+        .stApp {
+        background-image: url("data:image/png;base64,%s");
+        background-size: cover;
+        }
     </style>
     ''' % (bin_str)
     st.markdown(page_bg_img, unsafe_allow_html=True)
@@ -43,7 +43,8 @@ def nav_to(url):
 # se credenziali errate messaggio d'errore
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
-        nav_to("chatvera")
+        link = "https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app?user=" + st.session_state["Username"]
+        nav_to(link)
     else:
         st.error('Username e/o password errati', icon="🚨")
 
