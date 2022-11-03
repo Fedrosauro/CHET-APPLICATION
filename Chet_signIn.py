@@ -14,7 +14,7 @@ supabase = be.init_connection()
 #se non lo passa messaggio d'errore
 def check_signin():
     if be.signin(supabase, st.session_state["Username"], st.session_state['Password'], st.session_state['Mail']):
-        cl.nav_to("XXXXXX?Username=")
+        cl.nav_to("https://fedrosauro-chet-application-chet-login-c65w2j.streamlit.app/")
     else:
         st.error('Dati inseriti non corretti', icon="🚨")
 
