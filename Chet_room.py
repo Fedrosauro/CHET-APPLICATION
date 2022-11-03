@@ -54,10 +54,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 #if "Username" not in st.session_state:
-    url = "https://www.w3schools.com/cssref?user=pippo"
-    parsed = urlparse(url)
-    st.session_state["Username"] = parse_qs(parsed.query)['user'][0]
-    st.write(st.session_state["Username"])
+url = "https://www.w3schools.com/cssref?user=pippo"
+parsed = urlparse(url)
+st.session_state["Username"] = parse_qs(parsed.query)['user'][0]
+st.write(st.session_state["Username"])
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
