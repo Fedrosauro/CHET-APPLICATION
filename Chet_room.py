@@ -39,7 +39,7 @@ if button:
 df= be.get_Database_dataFrame(supabase)
 for x in range(len(df.index)):
     series = df.loc[x]
-    messaget = series.at["User"] + "\n" + series.at["Content"] + "\n" + series.at["Time"]
+    messaget = str(series.at["User"] + "\n" + series.at["Content"] + "\n" + series.at["Time"])
     message(series.to_string(index=False, header=False))
     message(messaget)
     st.markdown("""---""")
