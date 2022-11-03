@@ -83,7 +83,6 @@ for x in range(len(df.index)):
     change_color = "no_change"
     if st.session_state["Username"] == series.at["User"]
         change_color = "change"
-    ##37515F
 
     message = '''
         <div class = "container %s">
