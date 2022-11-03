@@ -18,7 +18,7 @@ st.markdown("""
 }
 .container{
   max-width: 350px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 5px;
   padding: 5px;
   word-wrap: break-word;
