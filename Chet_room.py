@@ -59,7 +59,7 @@ env_var = os.environ
 # Print the list of user's
 # environment variables
 print("User's Environment variable:")
-print(dict(env_var), width = 1)
+print(dict(env_var))
 
 url = "https://www.w3schools.com/cssref?user=pippo"
 parsed = urlparse(url)
