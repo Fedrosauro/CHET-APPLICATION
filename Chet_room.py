@@ -48,6 +48,7 @@ st.markdown("""
 
 .no_change{
     background-color: none;
+    float: right;
 }
 
 </style>
