@@ -44,11 +44,11 @@ st.markdown("""
 
 .change{
     background-color: #37515F;
+    float: right;
 }
 
 .no_change{
     background-color: none;
-    float: right;
 }
 
 </style>
