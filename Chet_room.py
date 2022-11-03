@@ -41,6 +41,6 @@ for x in range(len(df.index)):
     series = df.loc[x]
     messaget = series.at["User"] + "  \n" + series.at["Content"] + "  \n" + series.at["Time"]
     st.write(messaget)
-    message(series.to_string(index=False, header=False))
+    #message(series.to_string(index=False, header=False))
     message(st.write(messaget))
     st.markdown("""---""")
