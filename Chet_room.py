@@ -59,7 +59,7 @@ if st.experimental_get_query_params():
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
-st.session_state["Username"] = "pippo"
+st.session_state["Username"] = "andy"
 #df_users= pd.read_csv('Chet_users.csv', sep=';')
 
 #with st.sidebar:
@@ -71,7 +71,7 @@ button =st.button("Send message")
 if button:
     #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
     #come qui
-    be.send_message(supabase, st.session_state['Message'],st.session_state['Username'] , str(datetime.datetime.now().strftime("%H:%M:%S")))
+    be.send_message(supabase, st.session_state['Username'] ,st.session_state['Message'], str(datetime.datetime.now().strftime("%H:%M:%S")))
     st.session_state['Message'] = ""
 
 
