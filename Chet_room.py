@@ -79,7 +79,7 @@ if button:
 df= be.get_Database_dataFrame(supabase)
 if not df.empty:
     for x in range(len(df.index)):
-        series = df.loc[[x]]
+        series = df.loc[x]
         change_color = "no_change"
         if st.session_state["Username"] == series.at["User"]:
             change_color = "change"
