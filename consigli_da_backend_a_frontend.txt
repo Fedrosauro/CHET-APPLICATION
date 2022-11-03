@@ -1,5 +1,6 @@
 import streamlit as st
 import backend as be
+from streamlit_autorefresh import st_autorefresh
 
 #per ora proviamo a non mettere questa riga
 #@st.experimental_singleton
@@ -7,6 +8,9 @@ import backend as be
 # funzione da invocare all'inizio per creare connessione al database
 supabase=be.init_connection()
 
+#funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
+#(così le azioni come la stampa dei messaggi vedono i database aggiornati)
+st_autorefresh(interval=1000, key="dataframerefresh")
 
 #pagina iniziale login (username e password vengono inseriti nel session state)
 st.session_state['Username'] = st.text_input("Username")
@@ -26,3 +30,11 @@ st.session_state['Mail']=st.text_input("Mail")
 #ritorna true se le credenziali sono state inserite correttamente (fate che si passa alla pagina di chat)
 #ritorna false se un campo è vuoto o contiene spazi oppure se l'username è già occupato (fate che esce un messaggio d'errore)
 be.signin(supabase)
+
+#pagina per inviare messaggi
+st.session_state['Message'] = st.text_input("Message")
+
+#quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
+#come qui
+be.send_message (supabase, st.session_state['Message'], st.session_state['Username'], str(datetime.now().strftime(" %H:%M:%S")))
+st.session_state['Message'] = ""
