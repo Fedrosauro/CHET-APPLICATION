@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from streamlit_chat import message
-from datetime import datetime
 import backend as be
 from streamlit_autorefresh import st_autorefresh
 
