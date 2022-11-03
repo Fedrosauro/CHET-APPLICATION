@@ -37,7 +37,7 @@ st.markdown("""
 }
 
 .time{
-  font-size: 10px;
+  font-size: 12px;
   text-align: right;
   margin-top: 3px;
 }
@@ -60,7 +60,7 @@ if st.experimental_get_query_params():
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
-st.session_state["Username"] = "andy"
+st.session_state["Username"] = "erin"
 #df_users= pd.read_csv('Chet_users.csv', sep=';')
 
 #with st.sidebar:
