@@ -54,9 +54,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 #if "Username" not in st.session_state:
-
-st.session_state["Username"] = st.experimental_get_query_params()
-st.write(st.session_state["Username"])
+if st.experimental_get_query_params():
+    st.session_state["Username"] = st.experimental_get_query_params()["user"]
+    st.write(st.session_state["Username"])
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
