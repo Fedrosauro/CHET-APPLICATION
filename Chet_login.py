@@ -39,7 +39,7 @@ def nav_to(url):
     st.write(nav_script, unsafe_allow_html=True)
 
 # funzione che:
-# se credenziali giuste reindirizza alla chat
+# se credenziali giuste reindirizza alla chats
 # se credenziali errate messaggio d'errore
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
