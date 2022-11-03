@@ -32,10 +32,10 @@ button =st.button("Send message")
 if button:
     #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
     #come qui
-    be.send_message(supabase, st.session_state['Message'],st.session_state['Username'] , str(datetime.now().strftime(" %H:%M:%S")))
+    be.send_message(supabase, st.session_state['Message'],st.session_state['Username'] , str(datetime.now().strftime("%H:%M:%S")))
     st.session_state['Message'] = ""
 
 
 df= be.get_Database_dataFrame(supabase)
 for x in range(len(df.index)):
-    message(message=(df.iloc[[x]].to_string( index=False, header=False)))
+    message(df.iloc[[x]].to_string(index=False, header=False))
