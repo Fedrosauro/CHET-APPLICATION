@@ -60,7 +60,6 @@ if st.experimental_get_query_params():
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
-st.session_state["Username"] = "erin"
 #df_users= pd.read_csv('Chet_users.csv', sep=';')
 
 #with st.sidebar:
