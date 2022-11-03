@@ -53,7 +53,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-if "Username" not in st.session_state:
+#if "Username" not in st.session_state:
     url = "https://www.w3schools.com/cssref?user=pippo"
     parsed = urlparse(url)
     st.session_state["Username"] = parse_qs(parsed.query)['user'][0]
