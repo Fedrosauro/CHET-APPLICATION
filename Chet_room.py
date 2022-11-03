@@ -3,7 +3,7 @@ import pandas as pd
 from streamlit_chat import message
 import backend as be
 from streamlit_autorefresh import st_autorefresh
-import urllib.parse as urlp
+from urllib.parse import urlparse
 import os
 
 #funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
@@ -54,8 +54,8 @@ st.markdown("""
 
 if "Username" not in st.session_state:
     url = os.environ
-    parsed = urlp.urlparse(url)
-    st.session_state["Username"] = urlp.parse_qs(parsed.query)['user'][0]
+    parsed = urlparsed.urlparse(url)
+    st.session_state["Username"] = urlparsed.parse_qs(parsed.query)['user'][0]
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
