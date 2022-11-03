@@ -3,7 +3,7 @@ import pandas as pd
 from streamlit_chat import message
 import backend as be
 from streamlit_autorefresh import st_autorefresh
-import urlparse
+from urllib.parse import urlparse
 
 #funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
 #(così le azioni come la stampa dei messaggi vedono i database aggiornati)
