@@ -23,19 +23,18 @@ st.markdown("""
   padding: 5px;
   word-wrap: break-word;
   display: inline-block;
-  margin-bottom: 20px;
 }
 
 .user{
   font-weight: bold;
-  font-size: 12px;
-  margin-bottom: 8px;
+  font-size: 15px;
+  margin-bottom: 3px;
 }
 
 .time{
   font-size: 10px;
   text-align: right;
-  margin-top: 8px;
+  margin-top: 3px;
 }
 
 </style>
@@ -80,4 +79,3 @@ for x in range(len(df.index)):
         </div>
     ''' % (series.at["User"], series.at["Content"], series.at["Time"])
     st.markdown(message, unsafe_allow_html=True)
-    st.markdown("""---""")
