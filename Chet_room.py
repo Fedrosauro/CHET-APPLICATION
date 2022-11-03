@@ -64,7 +64,6 @@ for x in range(len(df.index)):
     #st.write(messaget)
     #message(series.to_string(index=False, header=False))
     #message(messaget)
-    st.markdown("""---""")
     message = '''
         <div class = "container">
           <div class = "user">
