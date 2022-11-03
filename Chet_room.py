@@ -4,6 +4,7 @@ from streamlit_chat import message
 import backend as be
 from streamlit_autorefresh import st_autorefresh
 from urllib.parse import urlparse
+from urllib.parse import parse_qs
 import os
 
 #funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
