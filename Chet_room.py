@@ -38,4 +38,7 @@ if button:
 
 df= be.get_Database_dataFrame(supabase)
 for x in range(len(df.index)):
-    message(df.iloc[[x]].to_string(index=False, header=False))
+    series = df.iloc[[x]]
+    message(series.to_string(index=False, header=False))
+    message(series.at["User"] + "\n" + series.at["Content"] + "\n" + series.at["Time"] + "\n")
+    st.markdown("""---""")
