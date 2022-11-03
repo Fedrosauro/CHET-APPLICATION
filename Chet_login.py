@@ -28,7 +28,7 @@ def set_background(png_file):
     background-size: cover;
     }
     </style>
-    ''' % bin_str
+    ''' % (bin_str)
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 #funzione che reindirizza ad un url

@@ -16,6 +16,28 @@ st.markdown("""
 .big-font {
     font-size:80px !important;
 }
+.container{
+  max-width: 350px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  word-wrap: break-word;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.user{
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.time{
+  font-size: 10px;
+  text-align: right;
+  margin-top: 8px;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -39,8 +61,23 @@ if button:
 df= be.get_Database_dataFrame(supabase)
 for x in range(len(df.index)):
     series = df.loc[x]
-    messaget = series.at["User"] + "  \n" + series.at["Content"] + "  \n" + series.at["Time"]
-    st.write(messaget)
+    #messaget = series.at["User"] + "  \n" + series.at["Content"] + "  \n" + series.at["Time"]
+    #st.write(messaget)
     #message(series.to_string(index=False, header=False))
-    message(st.write(messaget))
+    #message(messaget)
+    st.markdown("""---""")
+    message = '''
+        <div class = "container">
+          <div class = "user">
+              %s
+          </div>
+          <div class = "content">
+              %s
+          </div>
+          <div class = "time">
+              %s
+          </div>
+        </div>
+    ''' % (series.at["User"], series.at["Content"], series.at["Time"])
+    st.markdown(message, unsafe_allow_html=True)
     st.markdown("""---""")
