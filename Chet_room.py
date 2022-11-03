@@ -4,7 +4,6 @@ from streamlit_chat import message
 import backend as be
 from streamlit_autorefresh import st_autorefresh
 from urllib.parse import urlparse
-import os
 
 #funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
 #(così le azioni come la stampa dei messaggi vedono i database aggiornati)
@@ -53,7 +52,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 if "Username" not in st.session_state:
-    page_url = os.environ["REQUEST_URI"]
+    page_url = request.META.get('HTTP_REFERER')
     parsed = urlparse.urlparse(page_url)
     st.session_state["Username"] = urlparse.parse_qs(parsed.query)['user'][0]
 
