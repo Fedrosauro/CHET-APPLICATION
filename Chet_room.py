@@ -72,14 +72,15 @@ button =st.button("Send message")
 if button:
     #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
     #come qui
-    be.send_message(supabase, st.session_state['Username'] ,st.session_state['Message'], str(datetime.datetime.now().strftime("%H:%M:%S")))
-    st.session_state['Message'] = ""
-
+    if be.send_message(supabase, st.session_state['Username'] ,st.session_state['Message'], str(datetime.datetime.now().strftime("%H:%M:%S"))):
+        st.session_state['Message'] = ""
+    else:
+        st.error('Il messaggio non può essere vuoto', icon="🚨")
 
 df= be.get_Database_dataFrame(supabase)
 if not df.empty:
     for x in range(len(df.index)):
-        series = df.loc[x]
+        series = df.loc[range(len(df.index) - x]
         change_color = "no_change"
         if st.session_state["Username"] == series.at["User"]:
             change_color = "change"
