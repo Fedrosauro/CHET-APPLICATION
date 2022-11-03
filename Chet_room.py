@@ -40,8 +40,8 @@ df= be.get_Database_dataFrame(supabase)
 for x in range(len(df.index)):
     series = df.loc[x]
     messaget = series.at["User"] + "\n" + series.at["Content"] + "\n" + series.at["Time"]
-    print(messaget)
     st.write(messaget)
+    st.markdown("""series.at["User"]""")
     message(series.to_string(index=False, header=False))
     message(messaget)
     st.markdown("""---""")
