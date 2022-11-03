@@ -54,8 +54,8 @@ st.markdown("""
 
 if "Username" not in st.session_state:
     url = os.environ
-    parsed = urlparsed.urlparse(url)
-    st.session_state["Username"] = urlparsed.parse_qs(parsed.query)['user'][0]
+    parsed = urlparse.urlparse(url)
+    st.session_state["Username"] = urlparse.parse_qs(parsed.query)['user'][0]
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
