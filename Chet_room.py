@@ -71,7 +71,7 @@ button =st.button("Send message")
 if button:
     #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
     #come qui
-    be.send_message(supabase, st.session_state['Message'],st.session_state['Username'] , str(datetime.now().strftime("%H:%M:%S")))
+    be.send_message(supabase, st.session_state['Message'],st.session_state['Username'] , str(datetime.datetime.now().strftime("%H:%M:%S")))
     st.session_state['Message'] = ""
 
 
