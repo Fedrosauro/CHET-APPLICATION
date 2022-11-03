@@ -35,7 +35,7 @@ def signin(supabase_conn, username, password, mail):
 
 ############################### SEND MESSAGE FUNC##############################
 def send_message(supabase_conn, username, message, time):
-    if message = "":
+    if message == "":
         return False
     supabase_conn.table("Messages").insert({"Content":message, "User":username, "Time":time}).execute()
     return True
