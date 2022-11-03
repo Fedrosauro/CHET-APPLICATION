@@ -22,23 +22,21 @@ st.markdown("""
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
-df_users= pd.read_csv('Chet_users.csv', sep=';')
+#df_users= pd.read_csv('Chet_users.csv', sep=';')
 
-with st.sidebar:
-    st.title("Members")
-    for x in df_users.iloc[:,0]:
-        st.write(x)
+#with st.sidebar:
+#    st.title("Members")
+#    for x in df_users.iloc[:,0]:
+#        st.write(x)
 st.session_state['Message'] = st.text_input("Message")
 button =st.button("Send message")
-if button: 
+if button:
     #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
     #come qui
-    be.send_message (supabase, st.session_state['Message'],st.session_state['Username'] , str(datetime.now().strftime(" %H:%M:%S")))
+    be.send_message(supabase, st.session_state['Message'],st.session_state['Username'] , str(datetime.now().strftime(" %H:%M:%S")))
     st.session_state['Message'] = ""
 
 
 df= be.get_Database_dataFrame(supabase)
 for x in range(len(df.index)):
     message(message=(df.iloc[[x]].to_string( index=False, header=False)))
-    
-    
