@@ -9,7 +9,7 @@ import os
 
 #funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
 #(così le azioni come la stampa dei messaggi vedono i database aggiornati)
-st_autorefresh(interval=1000, key="dataframerefresh")
+#st_autorefresh(interval=1000, key="dataframerefresh")
 
 # funzione da invocare all'inizio per creare connessione al database
 supabase=be.init_connection()
@@ -59,6 +59,7 @@ if st.experimental_get_query_params():
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 
+st.session_state["Username"] = "pippo"
 #df_users= pd.read_csv('Chet_users.csv', sep=';')
 
 #with st.sidebar:
