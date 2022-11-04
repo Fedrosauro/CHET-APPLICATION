@@ -10,8 +10,6 @@ import Chet_login as cl
 import base64
 
 supabase = be.init_connection()
-st.title("")
-st.title("")
 
 st.set_page_config( page_title="Sign in", layout="centered")
 
@@ -42,7 +40,8 @@ def check_signin():
         cl.nav_to("https://fedrosauro-chet-application-chet-login-c65w2j.streamlit.app/")
     else:
         st.error('Dati inseriti non corretti', icon="🚨")
-
+st.title("")
+st.title("")
 st.title("Sign in")
 with st.form(key='form'):
     st.session_state['Username'] = st.text_input("Username")
