@@ -41,6 +41,9 @@ def check_signin():
     else:
         st.error('Dati inseriti non corretti', icon="🚨")
 
+for i in range(8):
+        st.write("")        
+
 placeholder = st.empty()
 with placeholder.container():
     with st.form(key='form'):
