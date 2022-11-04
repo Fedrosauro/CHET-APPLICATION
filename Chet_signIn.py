@@ -41,7 +41,6 @@ def check_signin():
     else:
         st.error('Dati inseriti non corretti', icon="🚨")
 st.title("")
-st.title("")
 st.header("")
 st.title("Sign in")
 with st.form(key='form'):
