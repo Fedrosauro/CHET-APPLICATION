@@ -40,9 +40,7 @@ def check_signin():
         cl.nav_to("https://fedrosauro-chet-application-chet-login-c65w2j.streamlit.app/")
     else:
         st.error('Dati inseriti non corretti', icon="🚨")
-st.title("")
-st.header("")
-st.title("Sign in")
+
 placeholder = st.empty()
 with placeholder.container():
     with st.form(key='form'):
