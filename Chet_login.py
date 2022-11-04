@@ -60,7 +60,7 @@ def check_login():
 
 set_background('schLogin3.png')
 
-for i in range(8):
+for i in range(10):
         st.write("")
 
 placeholder = st.empty()
