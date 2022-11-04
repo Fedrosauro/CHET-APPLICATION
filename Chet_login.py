@@ -60,11 +60,11 @@ def check_login():
 
 set_background('schLogin3.png')
 
-placeholder = st.empty()
-
-with placeholder.container():
-    for i in range(8):
+for i in range(8):
         st.write("")
+        
+placeholder = st.empty()
+with placeholder.container():
     with st.form("my_form"):
         st.session_state['Username'] = st.text_input("Username:")
         st.session_state['Password'] = st.text_input("Password:", type="password")
