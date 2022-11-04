@@ -45,3 +45,8 @@ def send_message(supabase_conn, username, message, time):
 def get_Database_dataFrame(supabase_conn):
     return pd.DataFrame(supabase_conn.table("Messages").select("*").execute().data)
 ##############################################################################
+
+############################## DELETE FUNCTION ###############################
+def delete_message(supabase_conn, User_to_delete, Time_to_delete):
+    supabase_conn.table("Messages").delete().eq('User', User_to_delete).eq('Time', Time_to_delete).execute()
+##############################################################################
