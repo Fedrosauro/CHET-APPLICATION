@@ -54,6 +54,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+st.write(st.session_state["Username"])
 #if "Username" not in st.session_state:
 if st.experimental_get_query_params():
     st.session_state["Username"] = st.experimental_get_query_params()["user"]
