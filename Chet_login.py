@@ -46,12 +46,12 @@ def check_login():
         placeholder.empty()
         st.write("Benvenuto "+ st.session_state["Username"])
         chat_botton = st.write(f'''
-                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user="> 
+                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s">
                       <button>
                       VAI ALLA CHAT
                       </button>
                       </a>
-                      ''',
+                      ''' % (st.session_state["Username"]),
                       unsafe_allow_html=True
                       )
     else:
@@ -62,7 +62,7 @@ set_background('schLogin3.png')
 
 for i in range(8):
         st.write("")
-        
+
 placeholder = st.empty()
 with placeholder.container():
     with st.form("my_form"):
@@ -70,7 +70,7 @@ with placeholder.container():
         st.session_state['Password'] = st.text_input("Password:", type="password")
         b1 = st.form_submit_button("LOGIN")
         st.write('Non sei ancora registrato?')
-        b2 = st.form_submit_button("SIGN IN")    
+        b2 = st.form_submit_button("SIGN IN")
 if b1:
     check_login()
 if b2:
