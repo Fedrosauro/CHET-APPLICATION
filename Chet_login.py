@@ -62,7 +62,7 @@ set_background('schLogin3.png')
 
 placeholder = st.empty()
 
-with placeholder.container:
+with placeholder.container():
     for i in range(8):
         st.write("")
     with st.form("my_form"):
