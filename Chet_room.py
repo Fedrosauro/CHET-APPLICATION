@@ -83,7 +83,7 @@ if not df.empty:
     for x in reversed(range(len(df.index))):
         series = df.loc[x]
         change_color = "no_change"
-        if st.session_state["Username"] == series.at["User"]:
+        if st.session_state["Username"][0] == series.at["User"]:
             change_color = "change"
 
         message = '''
