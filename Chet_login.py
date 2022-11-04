@@ -59,6 +59,8 @@ with st.form("my_form"):
      b1 = st.form_submit_button("LOGIN")
      st.write('Non sei ancora registrato?')
      b2 = st.form_submit_button("SIGN IN")
+     link = '[GitHub](http://github.com)'
+     st.markdown(link, unsafe_allow_html=True)
 if b1:
     check_login()
 if b2:
