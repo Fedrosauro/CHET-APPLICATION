@@ -34,7 +34,7 @@ def set_background(png_file):
 #funzione che reindirizza ad un url
 def nav_to(url):
     nav_script = """
-        <meta http-equiv="refresh" content="0; url='%s'">
+        <meta http-equiv="refresh" content="0; URL=javascript:window.open('http://google.com','_parent');">
     """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
