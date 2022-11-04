@@ -34,7 +34,7 @@ def set_background(png_file):
 #funzione che reindirizza ad un url
 def nav_to(url):
     nav_script = """
-        < url='%s'">
+        < content="0; url='%s'">
     """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
