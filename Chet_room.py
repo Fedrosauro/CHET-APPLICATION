@@ -59,7 +59,7 @@ if st.experimental_get_query_params():
     st.session_state["Username"] = st.experimental_get_query_params()["user"]
 
 st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
-st.write(st.session_state["Username"][0]])
+st.write(st.session_state["Username"][0])
 st.write(st.experimental_get_query_params()["user"])
 
 #df_users= pd.read_csv('Chet_users.csv', sep=';')
