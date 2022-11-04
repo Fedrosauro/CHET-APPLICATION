@@ -43,22 +43,34 @@ def nav_to(url):
 # se credenziali errate messaggio d'errore
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
-        link = "https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=" + st.session_state["Username"]
-        nav_to(link)
+        placeholder.empty()
+        st.write("Benvenuto "+ st.session_state["Username"])
+        chat_botton = st.write(f'''
+                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user="> 
+                      <button>
+                      VAI ALLA CHAT
+                      </button>
+                      </a>
+                      ''',
+                      unsafe_allow_html=True
+                      )
     else:
         st.error('Username e/o password errati', icon="🚨")
 
 
 set_background('schLogin3.png')
-for i in range(8):
-    st.write("")
 
-with st.form("my_form"):
-     st.session_state['Username'] = st.text_input("Username:")
-     st.session_state['Password'] = st.text_input("Password:", type="password")
-     b1 = st.form_submit_button("LOGIN")
-     st.write('Non sei ancora registrato?')
-     b2 = st.form_submit_button("SIGN IN")
+placeholder = st.empty()
+
+with placeholder.container:
+    for i in range(8):
+        st.write("")
+    with st.form("my_form"):
+        st.session_state['Username'] = st.text_input("Username:")
+        st.session_state['Password'] = st.text_input("Password:", type="password")
+        b1 = st.form_submit_button("LOGIN")
+        st.write('Non sei ancora registrato?')
+        b2 = st.form_submit_button("SIGN IN")    
 if b1:
     check_login()
 if b2:
