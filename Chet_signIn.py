@@ -10,6 +10,8 @@ import Chet_login as cl
 import base64
 
 supabase = be.init_connection()
+st.title("")
+st.title("")
 
 st.set_page_config( page_title="Sign in", layout="centered")
 
