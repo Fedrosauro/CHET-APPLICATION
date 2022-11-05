@@ -46,7 +46,7 @@ for i in range(10):
 
 placeholder = st.empty()
 with placeholder.container():
-    with st.form(key='form'):
+    with st.form(key='form', clear_on_submit=False):
         st.session_state['Username'] = st.text_input("Username")
         st.session_state['Password'] = st.text_input("Password", type="password")
         st.session_state['Mail'] = st.text_input("Mail")
