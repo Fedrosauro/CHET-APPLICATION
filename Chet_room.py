@@ -27,7 +27,7 @@ st.markdown("""
   padding: 5px;
   word-wrap: break-word;
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .user{
