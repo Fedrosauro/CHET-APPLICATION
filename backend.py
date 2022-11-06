@@ -50,3 +50,8 @@ def get_Database_dataFrame(supabase_conn):
 def delete_message(supabase_conn, User_to_delete, Time_to_delete):
     supabase_conn.table("Messages").delete().eq('User', User_to_delete).eq('Time', Time_to_delete).execute()
 ##############################################################################
+
+########################## GET ADMIN INFORMATION #############################
+def get_admin_info(supabase_conn, username):
+    supabase_conn.table("Users").select("Admin").eq("User", username).execute()
+##############################################################################
