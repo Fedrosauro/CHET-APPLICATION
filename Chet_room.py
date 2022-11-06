@@ -21,7 +21,7 @@ st.markdown("""
     font-size:80px !important;
 }
 .container{
-  max-width: 350px;
+  max-width: 400px;
   border: 1px solid white;
   border-radius: 5px;
   padding: 5px;
