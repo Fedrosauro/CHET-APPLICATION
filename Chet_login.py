@@ -47,7 +47,7 @@ def check_login():
         placeholder.empty()
         st.write("Benvenuto "+ st.session_state["Username"])
         chat_botton = st.write(f'''
-                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s&%s">
+                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s&admin=%s">
                       <button>
                       VAI ALLA CHAT
                       </button>
