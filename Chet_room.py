@@ -68,6 +68,7 @@ st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
 #        st.write(x)
 st.session_state['Message'] = st.text_input("Message")
 button =st.button("Send message")
+st.markdown("""---""")
 if button:
     #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
     #come qui
