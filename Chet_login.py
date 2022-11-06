@@ -46,6 +46,7 @@ def check_login():
         admin_value = be.get_admin_info(supabase, st.session_state["Username"])
         placeholder.empty()
         st.write("Benvenuto "+ st.session_state["Username"])
+        st.write(admin_value.loc[x])
         st.write(admin_value)
         chat_botton = st.write(f'''
                       <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s">

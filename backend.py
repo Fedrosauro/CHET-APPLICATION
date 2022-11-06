@@ -53,5 +53,5 @@ def delete_message(supabase_conn, User_to_delete, Time_to_delete):
 
 ########################## GET ADMIN INFORMATION #############################
 def get_admin_info(supabase_conn, username):
-    return pd.Series(supabase_conn.table("Users").select("Admin").eq("Username", username).execute())
+    return pd.Dataframe(supabase_conn.table("Users").select("Admin").eq("Username", username).execute())
 ##############################################################################
