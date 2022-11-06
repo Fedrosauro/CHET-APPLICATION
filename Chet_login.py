@@ -43,18 +43,16 @@ def nav_to(url):
 # se credenziali errate messaggio d'errore
 def check_login():
     if be.login(supabase, st.session_state["Username"], st.session_state["Password"]):
-        admin_value = be.get_admin_info(supabase, st.session_state["Username"])
+        admin_value = be.get_admin_info(supabase, st.session_state["Username"]).loc[0].at["Admin"]
         placeholder.empty()
         st.write("Benvenuto "+ st.session_state["Username"])
-        st.write(admin_value.loc[0].at["Admin"])
-        st.write(admin_value)
         chat_botton = st.write(f'''
-                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s">
+                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s&%s">
                       <button>
                       VAI ALLA CHAT
                       </button>
                       </a>
-                      ''' % (st.session_state["Username"]),
+                      ''' % (st.session_state["Username"], admin_value),
                       unsafe_allow_html=True
                       )
     else:
