@@ -12,7 +12,7 @@ import base64
 
 supabase = be.init_connection()
 
-st.set_page_config( page_title="CHET", layout="centered")
+st.set_page_config( page_title="CHAT", layout="centered")
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
@@ -46,7 +46,7 @@ def check_login():
         admin_value = be.get_admin_info(supabase, st.session_state["Username"]).loc[0].at["Admin"]
         placeholder.empty()
         st.write(f'''
-            <p style="font-family:Courier;color:Orange; font-size: 20px;">Benvenuto %s!</p>
+            <p style="font-family:Courier;color:Orange; font-size: 20px;">Ciao %s!</p>
             '''% (st.session_state["Username"]),
                       unsafe_allow_html=True
                 )
