@@ -130,44 +130,44 @@ st.markdown('<p class="big-font" style="font-family:Courier;color:Orange; font-s
 col1, col2=st.columns([13,4])
 
 with col1:
-    st.session_state['Message'] = st.text_input("Message:")
-    
-    if st.button("Send message"):
-        #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
-        #come qui
-        if be.send_message(supabase, st.session_state['Username'][0] ,st.session_state['Message'], str(datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"))):
-            st.session_state['Message'] = ""
-        else:
-            st.error('Il messaggio non può essere vuoto', icon="🚨")
+        st.session_state['Message'] = st.text_input("Message:")
+        button = st.button("Send message")
+        if button:
+                #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
+                #come qui
+                if be.send_message(supabase, st.session_state['Username'][0] ,st.session_state['Message'], str(datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"))):
+                    st.session_state['Message'] = ""
+                else:
+                    st.error('Il messaggio non può essere vuoto', icon="🚨")
 
-    df= be.get_Database_dataFrame(supabase)
-    if not df.empty:
-        for x in reversed(range(len(df.index))):
-            series = df.loc[x]
-            change_side = "no_change"
-            color = "orange"
-            border = "border_orange"
-            speculare = "no_speculare"
-            if st.session_state["Username"][0] == series.at["User"]:
-                change_side = "change"
-                color = "white"
-                border = "border_white"
-                speculare = "speculare"
+            df= be.get_Database_dataFrame(supabase)
+            if not df.empty:
+                for x in reversed(range(len(df.index))):
+                    series = df.loc[x]
+                    change_side = "no_change"
+                    color = "orange"
+                    border = "border_orange"
+                    speculare = "no_speculare"
+                    if st.session_state["Username"][0] == series.at["User"]:
+                        change_side = "change"
+                        color = "white"
+                        border = "border_white"
+                        speculare = "speculare"
 
-            message = '''
-                <div class = "container %s %s">
-                  <div class = "user %s">
-                          %s
-                  </div>
-                  <div class = "%s">
-                          %s
-                  </div>
-                  <div class = "time %s">
-                          %s
-                  </div>
-                </div>
-                ''' % (border, change_side, color, series.at["User"], speculare, series.at["Content"], color, series.at["Time"])
-            st.markdown(message, unsafe_allow_html=True)
+                    message = '''
+                        <div class = "container %s %s">
+                          <div class = "user %s">
+                                  %s
+                          </div>
+                          <div class = "%s">
+                                  %s
+                          </div>
+                          <div class = "time %s">
+                                  %s
+                          </div>
+                        </div>
+                        ''' % (border, change_side, color, series.at["User"], speculare, series.at["Content"], color, series.at["Time"])
+                    st.markdown(message, unsafe_allow_html=True)
 
 with col2:
     tabs_font_css = """
