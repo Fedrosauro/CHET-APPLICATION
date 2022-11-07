@@ -96,12 +96,25 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+tabs_font_css = """
+<style>
+div[class*="stTextInput"] label {
+  font-size: 20px;
+  font-family:  "Courier New", monospace;
+  text-align: Center;
+  color: Orange;
+}
+</style>
+"""
+st.write(tabs_font_css, unsafe_allow_html=True)
+
+
 #if "Username" not in st.session_state:
 if st.experimental_get_query_params():
     st.session_state["Username"] = st.experimental_get_query_params()["user"]
     st.session_state["Admin"] = st.experimental_get_query_params()["admin"]
 
-st.markdown('<p class="big-font">Chat </p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font" style="font-family:Courier;color:Orange; font-size: 40px;">Chat </p>', unsafe_allow_html=True)
 
 #df_users= pd.read_csv('Chet_users.csv', sep=';')
 
