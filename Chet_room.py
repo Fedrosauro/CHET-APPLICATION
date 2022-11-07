@@ -100,17 +100,17 @@ if not df.empty:
                 </div>
             ''' % (change_color, series.at["User"], series.at["Content"], series.at["Time"])
         else:
-        message = '''
-            <div class = "container %s">
-              <div class = "user">
-                  %s
-              </div>
-              <div class = "content">
-                  %s
-              </div>
-              <div class = "time">
-                  %s
-              </div>
-            </div>
-        ''' % (change_color, series.at["User"], series.at["Content"], series.at["Time"])
+            message = '''
+                <div class = "container %s">
+                  <div class = "user">
+                      %s
+                  </div>
+                  <div class = "content">
+                      %s
+                  </div>
+                  <div class = "time">
+                      %s
+                  </div>
+                </div>
+            ''' % (change_color, series.at["User"], series.at["Content"], series.at["Time"])
         st.markdown(message, unsafe_allow_html=True)
