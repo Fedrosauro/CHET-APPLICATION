@@ -135,7 +135,7 @@ with col1:
     if button:
         #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
         #come qui
-        if be.send_message(supabase, st.session_state['Username'][0] ,st.session_state['Message'], str(datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"))):
+        if be.send_message(supabase, st.session_state['Username'][0] ,st.session_state['Message'], datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")):
             st.session_state['Message'] = ""
         else:
             st.error('Il messaggio non può essere vuoto', icon="🚨")
@@ -153,7 +153,7 @@ with col1:
                 color = "white"
                 border = "border_white"
                 speculare = "speculare"
-    
+
             message = '''
                 <div class = "container %s %s">
                   <div class = "user %s">
@@ -168,8 +168,8 @@ with col1:
                 </div>
                 ''' % (border, change_side, color, series.at["User"], speculare, series.at["Content"], color, series.at["Time"])
             st.markdown(message, unsafe_allow_html=True)
-               
-                            
+
+
 
 
 with col2:
