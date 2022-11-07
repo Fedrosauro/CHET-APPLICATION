@@ -134,7 +134,7 @@ with col1:
      with placeholder.container():
                 with st.form(key='form', clear_on_submit=True):
                         st.session_state['Message'] = st.text_input("Message:")
-                        button =st.button("Send message")
+                        button =st.form_submit_button("Send message")
     if button:
         #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
         #come qui
