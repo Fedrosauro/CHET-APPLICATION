@@ -122,7 +122,7 @@ st.markdown('<p class="big-font" style="font-family:Courier;color:Orange; font-s
 #    st.title("Members")
 #    for x in df_users.iloc[:,0]:
 #        st.write(x)
-st.session_state['Message'] = st.text_input("Message")
+st.session_state['Message'] = st.text_input("Message:")
 button =st.button("Send message")
 if button:
     #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
