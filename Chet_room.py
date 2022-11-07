@@ -164,7 +164,6 @@ if(st.session_state["Admin"] == True):
                 st.markdown(message, unsafe_allow_html=True)
 
     with col2:
-        st.write("se admin:")
         tabs_font_css = """
         <style>
         div[class*="stTextInput"] label {
