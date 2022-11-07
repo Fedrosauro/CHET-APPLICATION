@@ -85,32 +85,17 @@ if not df.empty:
         if st.session_state["Username"][0] == series.at["User"]:
             change_color = "change"
 
-        if series.at["Admin"] == True:
-            message = '''
-                <div class = "container %s">
-                  <div class = "user">
-                      %s ♚
-                  </div>
-                  <div class = "content">
+        message = '''
+            <div class = "container %s">
+              <div class = "user">
                       %s
-                  </div>
-                  <div class = "time">
+              </div>
+              <div class = "content">
                       %s
-                  </div>
-                </div>
-            ''' % (change_color, series.at["User"], series.at["Content"], series.at["Time"])
-        else:
-            message = '''
-                <div class = "container %s">
-                  <div class = "user">
+              </div>
+              <div class = "time">
                       %s
-                  </div>
-                  <div class = "content">
-                      %s
-                  </div>
-                  <div class = "time">
-                      %s
-                  </div>
-                </div>
+              </div>
+            </div>
             ''' % (change_color, series.at["User"], series.at["Content"], series.at["Time"])
         st.markdown(message, unsafe_allow_html=True)
