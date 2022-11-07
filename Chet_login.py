@@ -50,9 +50,9 @@ def check_login():
             '''% (st.session_state["Username"]),
                       unsafe_allow_html=True
                 )
-           
+
         chat_botton = st.write(f'''
-                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s&admin=%s">
+                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s&ZDJds3=%s">
                       <button>
                       VAI ALLA CHAT
                       </button>
@@ -73,7 +73,7 @@ div[class*="stTextInput"] label {
   font-family: "Courier New", monospace;
   text-align: Center;
   color: Orange;
-  
+
 }
 
 div[class*="stTextInput"] label {

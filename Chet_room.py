@@ -116,7 +116,7 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 #if "Username" not in st.session_state:
 if st.experimental_get_query_params():
     st.session_state["Username"] = st.experimental_get_query_params()["user"]
-    st.session_state["Admin"] = st.experimental_get_query_params()["admin"]
+    st.session_state["Admin"] = st.experimental_get_query_params()["ZDJds3"]
 
 st.markdown('<p class="big-font" style="font-family:Courier;color:Orange; font-size: 40px;">Chat </p>', unsafe_allow_html=True)
 
