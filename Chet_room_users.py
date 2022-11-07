@@ -10,8 +10,8 @@ import base64
 
 st.markdown("""
         <style>
-               body {
-                    padding-top: -150px;
+               .css-1n76uvr {
+                    margin-top: -150px;
                 }
         </style>
         """, unsafe_allow_html=True)
