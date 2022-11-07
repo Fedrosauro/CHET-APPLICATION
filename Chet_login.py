@@ -63,7 +63,7 @@ def check_login():
                           )
         else:
             chat_botton = st.write(f'''
-                          <a href="?user=%s">
+                          <a href="https://fedrosauro-chet-application-chet-room-users-kdnlq9.streamlit.app/?user=%s">
                           <button>
                           VAI ALLA CHAT
                           </button>
