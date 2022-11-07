@@ -8,6 +8,14 @@ from urllib.parse import parse_qs
 import datetime
 import base64
 
+st.markdown("""
+        <style>
+               body {
+                    padding-top: 0px;
+                }
+        </style>
+        """, unsafe_allow_html=True)
+
 #funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
 #(così le azioni come la stampa dei messaggi vedono i database aggiornati)
 st_autorefresh(interval=1000, key="dataframerefresh")
