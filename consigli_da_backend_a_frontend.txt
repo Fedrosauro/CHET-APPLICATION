@@ -38,3 +38,9 @@ st.session_state['Message'] = st.text_input("Message")
 #come qui
 be.send_message (supabase, st.session_state['Message'], st.session_state['Username'], str(datetime.now().strftime(" %H:%M:%S")))
 st.session_state['Message'] = ""
+
+#funzione per eliminare messaggi (disponibile solo all'admin)
+#ritorna true se ha eliminato un messaggio con mittente e orario indicati
+#ritorna false se non esiste un messaggio con mittente e orario indicati
+be.delete_message(supabase, st.session_state['User_to_delete'], st.session_state['Time_to_delete'])
+#mittente e data/ora del messaggio da eliminare vanno salvati rispettivamente in st.session_state['User_to_delete'] e st.session_state['Time_to_delete']
