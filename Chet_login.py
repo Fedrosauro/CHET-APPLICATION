@@ -61,6 +61,33 @@ def check_login():
 
 set_background('back3.png')
 
+tabs_font_css = """
+<style>
+div[class*="stTextInput"] label {
+  font-size: 20px;
+  font-family: "Courier New", monospace;
+  text-align: Center;
+  color: Orange;
+  
+}
+
+div[class*="stTextInput"] label {
+  font-size: 20px;
+  font-family:  "Courier New", monospace;
+  text-align: Center;
+  color: Orange;
+}
+
+div[class*="stTextInput"] label {
+  font-size: 20px;
+  font-family:  "Courier New", monospace;
+  text-align: Center;
+  color: Orange;
+}
+</style>
+"""
+st.write(tabs_font_css, unsafe_allow_html=True)
+
 for i in range(10):
         st.write("")
 
