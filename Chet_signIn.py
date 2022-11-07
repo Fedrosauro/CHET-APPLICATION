@@ -74,9 +74,9 @@ for i in range(5):
 placeholder = st.empty()
 with placeholder.container():
     with st.form(key='form', clear_on_submit=True):
-        st.session_state['Username'] = st.text_input("Username")
-        st.session_state['Password'] = st.text_input("Password", type="password")
-        st.session_state['Mail'] = st.text_input("Mail")
+        st.session_state['Username'] = st.text_input("Username:")
+        st.session_state['Password'] = st.text_input("Password:", type="password")
+        st.session_state['Mail'] = st.text_input("Mail:")
         signin_button=st.form_submit_button(label='Sign In')
 
 if signin_button:
