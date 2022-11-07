@@ -31,7 +31,7 @@ def set_background(png_file):
     </style>
     ''' % (bin_str)
     st.markdown(page_bg_img, unsafe_allow_html=True)
-    
+
 set_background('back4.png')
 
 #CSS stuff
@@ -42,7 +42,7 @@ st.markdown("""
 }
 .container{
   max-width: 400px;
-  border: 1px solid white;
+  border: 1px solid orange;
   border-radius: 5px;
   padding: 5px;
   word-wrap: break-word;
@@ -69,6 +69,14 @@ st.markdown("""
 
 .no_change{
     background-color: none;
+}
+
+.orange{
+    color: orange;
+}
+
+.white{
+    color: white;
 }
 
 </style>
@@ -102,12 +110,14 @@ if not df.empty:
     for x in reversed(range(len(df.index))):
         series = df.loc[x]
         change_color = "no_change"
+        color = "white"
         if st.session_state["Username"][0] == series.at["User"]:
             change_color = "change"
+            color = "orange"
 
         message = '''
             <div class = "container %s">
-              <div class = "user">
+              <div class = "user %s">
                       %s
               </div>
               <div class = "content">
@@ -117,5 +127,5 @@ if not df.empty:
                       %s
               </div>
             </div>
-            ''' % (change_color, series.at["User"], series.at["Content"], series.at["Time"])
+            ''' % (change_color, color, series.at["User"], series.at["Content"], series.at["Time"])
         st.markdown(message, unsafe_allow_html=True)
