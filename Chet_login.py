@@ -46,7 +46,7 @@ def check_login():
         admin_value = be.get_admin_info(supabase, st.session_state["Username"]).loc[0].at["Admin"]
         placeholder.empty()
         st.write(f'''
-            <p style="font-family:Courier;color:Orange; font-size: 20px;">Benvenuto %s</p>
+            <p style="font-family:Courier;color:Orange; font-size: 20px;">Benvenuto %s!</p>
             '''% (st.session_state["Username"]),
                       unsafe_allow_html=True
                 )
