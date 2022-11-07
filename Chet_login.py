@@ -51,15 +51,26 @@ def check_login():
                       unsafe_allow_html=True
                 )
 
-        chat_botton = st.write(f'''
-                      <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s&ZDJds3=%s">
-                      <button>
-                      VAI ALLA CHAT
-                      </button>
-                      </a>
-                      ''' % (st.session_state["Username"], admin_value),
-                      unsafe_allow_html=True
-                      )
+        if admin_value == True:
+            chat_botton = st.write(f'''
+                          <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s">
+                          <button>
+                          VAI ALLA CHAT
+                          </button>
+                          </a>
+                          ''' % (st.session_state["Username"]),
+                          unsafe_allow_html=True
+                          )
+        else:
+            chat_botton = st.write(f'''
+                          <a href="?user=%s">
+                          <button>
+                          VAI ALLA CHAT
+                          </button>
+                          </a>
+                          ''' % (st.session_state["Username"]),
+                          unsafe_allow_html=True
+                          )
     else:
         st.error('Username e/o password errati', icon="🚨")
 
