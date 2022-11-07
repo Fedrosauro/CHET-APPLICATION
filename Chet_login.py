@@ -77,13 +77,6 @@ div[class*="stTextInput"] label {
   text-align: Center;
   color: Orange;
 }
-
-div[class*="stTextInput"] label {
-  font-size: 20px;
-  font-family:  "Courier New", monospace;
-  text-align: Center;
-  color: Orange;
-}
 </style>
 """
 st.write(tabs_font_css, unsafe_allow_html=True)
@@ -97,7 +90,8 @@ with placeholder.container():
         st.session_state['Username'] = st.text_input("Username:")
         st.session_state['Password'] = st.text_input("Password:", type="password")
         b1 = st.form_submit_button("LOGIN")
-        st.write('Non sei ancora registrato?')
+        registrarsi ='<p style="font-family:Courier;color:Orange; font-size: 20px;">Non sei ancora registrato?</p>'
+        st.markdown(registrarsi, unsafe_allow_html=True)
         b2 = st.form_submit_button("SIGN IN")
 if b1:
     check_login()
