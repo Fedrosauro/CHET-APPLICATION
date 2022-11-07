@@ -63,10 +63,6 @@ st.markdown("""
   color:orange;
 }
 
-.content{
-    color:white;
-}
-
 .change{
     float: right;
 }
@@ -91,6 +87,14 @@ st.markdown("""
 .border_orange{
     border: 1px solid orange;
     border-radius: 5px;
+}
+
+.speculare{
+    color:orange;
+}
+
+.no_speculare{
+    color:white;
 }
 
 </style>
@@ -139,22 +143,24 @@ if not df.empty:
         change_side = "no_change"
         color = "orange"
         border = "border_orange"
+        speculare = "no_speculare"
         if st.session_state["Username"][0] == series.at["User"]:
             change_side = "change"
             color = "white"
             border = "border_white"
+            speculare = "speculare"
 
         message = '''
             <div class = "container %s %s">
               <div class = "user %s">
                       %s
               </div>
-              <div class = "content">
+              <div class = "%s">
                       %s
               </div>
               <div class = "time %s">
                       %s
               </div>
             </div>
-            ''' % (border, change_side, color, series.at["User"], series.at["Content"], color, series.at["Time"])
+            ''' % (border, change_side, color, series.at["User"], speculare series.at["Content"], color, series.at["Time"])
         st.markdown(message, unsafe_allow_html=True)
