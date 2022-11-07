@@ -120,8 +120,8 @@ if st.experimental_get_query_params():
 
 st.markdown('<p class="big-font" style="font-family:Courier;color:Orange; font-size: 40px;">Chat </p>', unsafe_allow_html=True)
 
+col1, col2=st.columns([13,4])
 if(st.session_state["Admin"] == True):
-    col1, col2=st.columns([13,4])
 
     with col1:
         st.session_state['Message'] = st.text_input("Message:")
