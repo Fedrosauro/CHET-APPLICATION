@@ -131,7 +131,7 @@ col1, col2=st.columns([13,4])
 
 with col1:
     st.session_state['Message'] = st.text_input("Message:")
-    button =st.button("Send message")
+    button = st.button("Send message")
     if button:
         #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
         #come qui
