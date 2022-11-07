@@ -50,9 +50,7 @@ def check_login():
             '''% (st.session_state["Username"]),
                       unsafe_allow_html=True
                 )
-            
-        
-        "Benvenuto "+ st.session_state["Username"])
+           
         chat_botton = st.write(f'''
                       <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s&admin=%s">
                       <button>
