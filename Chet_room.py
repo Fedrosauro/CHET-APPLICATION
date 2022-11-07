@@ -162,33 +162,34 @@ with col1:
                 ''' % (border, change_side, color, series.at["User"], speculare, series.at["Content"], color, series.at["Time"])
             st.markdown(message, unsafe_allow_html=True)
 
-with col2:
-    tabs_font_css = """
-    <style>
-    div[class*="stTextInput"] label {
-      font-size: 20px;
-      font-family: "Courier New", monospace;
-      color: Orange;
+if(st.session_state["Admin"] == True):
+    with col2:
+        tabs_font_css = """
+        <style>
+        div[class*="stTextInput"] label {
+          font-size: 20px;
+          font-family: "Courier New", monospace;
+          color: Orange;
 
-    }
+        }
 
-    div[class*="stTextInput"] label {
-      font-size: 20px;
-      font-family:  "Courier New", monospace;
-      color: Orange;
-    }
+        div[class*="stTextInput"] label {
+          font-size: 20px;
+          font-family:  "Courier New", monospace;
+          color: Orange;
+        }
 
-    </style>
-    """
+        </style>
+        """
 
-    st.write(tabs_font_css, unsafe_allow_html=True)
-    with st.form("Elimina messaggi", clear_on_submit=False):
-                    st.session_state["User_to_delete"] = st.text_input("User")
-                    st.session_state["Time_to_delete"] = st.text_input("Date")
-                    button_delete = st.form_submit_button("Delete")
+        st.write(tabs_font_css, unsafe_allow_html=True)
+        with st.form("Elimina messaggi", clear_on_submit=False):
+                        st.session_state["User_to_delete"] = st.text_input("User")
+                        st.session_state["Time_to_delete"] = st.text_input("Date")
+                        button_delete = st.form_submit_button("Delete")
 
-    if button_delete:
-        if be.delete_message(supabase, st.session_state["User_to_delete"], st.session_state["Time_to_delete"]):
-            st.write("Messaggio eliminato correttamente")
-        else:
-            st.error('Messaggio non trovato', icon="🚨")
+        if button_delete:
+            if be.delete_message(supabase, st.session_state["User_to_delete"], st.session_state["Time_to_delete"]):
+                st.write("Messaggio eliminato correttamente")
+            else:
+                st.error('Messaggio non trovato', icon="🚨")
