@@ -131,8 +131,8 @@ col1, col2=st.columns([13,4])
 
 with col1:
     st.session_state['Message'] = st.text_input("Message:")
-    button =st.button("Send message")
-    if button:
+    
+    if st.button("Send message"):
         #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
         #come qui
         if be.send_message(supabase, st.session_state['Username'][0] ,st.session_state['Message'], str(datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"))):
