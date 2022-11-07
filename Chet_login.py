@@ -59,7 +59,7 @@ def check_login():
         st.error('Username e/o password errati', icon="🚨")
 
 
-set_background('schLogin3.png')
+set_background('back3.png')
 
 for i in range(10):
         st.write("")
