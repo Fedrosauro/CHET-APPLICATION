@@ -88,7 +88,7 @@ if not df.empty:
         message = '''
             <div class = "container %s">
               <div class = "user">
-                  %s
+                  %s ♚
               </div>
               <div class = "content">
                   %s
