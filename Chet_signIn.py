@@ -31,7 +31,7 @@ def set_background(png_file):
     ''' % (bin_str)
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('schLogin3.png')
+set_background('back3.png')
 
 #se passa il controllo si va alla chat
 #se non lo passa messaggio d'errore
@@ -42,7 +42,7 @@ def check_signin():
         st.error('Dati inseriti non corretti', icon="🚨")
 
 for i in range(10):
-        st.write("")        
+        st.write("")
 
 placeholder = st.empty()
 with placeholder.container():
@@ -54,7 +54,7 @@ with placeholder.container():
 
 if signin_button:
     check_signin()
-    
+
 st.markdown("""
         <style>
                .block-container {
