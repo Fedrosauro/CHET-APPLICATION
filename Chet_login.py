@@ -88,7 +88,7 @@ div[class*="stTextInput"] label {
 """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
-for i in range(10):
+for i in range(5):
         st.write("")
 
 placeholder = st.empty()
