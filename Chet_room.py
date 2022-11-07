@@ -43,7 +43,6 @@ st.markdown("""
 
 .container{
   max-width: 400px;
-  border-radius: 5px;
   padding: 5px;
   word-wrap: break-word;
   display: inline-block;
@@ -86,10 +85,14 @@ st.markdown("""
 
 .bordo_white{
     border: 1px solid white;
+      border-radius: 5px;
+
 }
 
 .bordo_orange{
     border: 1px solid orange;
+      border-radius: 5px;
+
 }
 
 </style>
