@@ -53,7 +53,7 @@ def check_login():
 
         if admin_value == True:
             chat_botton = st.write(f'''
-                          <a href="https://fedrosauro-chet-application-chet-room-0dx65z.streamlit.app/?user=%s">
+                          <a href="https://fedrosauro-chet-application-chet-room-akt1u6.streamlit.app/?user=%s">
                           <button>
                           VAI ALLA CHAT
                           </button>
