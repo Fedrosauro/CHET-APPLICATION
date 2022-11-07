@@ -162,5 +162,5 @@ if not df.empty:
                       %s
               </div>
             </div>
-            ''' % (border, change_side, color, series.at["User"], speculare series.at["Content"], color, series.at["Time"])
+            ''' % (border, change_side, color, series.at["User"], speculare, series.at["Content"], color, series.at["Time"])
         st.markdown(message, unsafe_allow_html=True)
