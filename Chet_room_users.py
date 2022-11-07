@@ -11,7 +11,7 @@ import base64
 st.markdown("""
         <style>
                body {
-                    padding-top: 0px;
+                    padding-top: -150px;
                 }
         </style>
         """, unsafe_allow_html=True)
