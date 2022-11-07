@@ -130,11 +130,11 @@ st.markdown('<p class="big-font" style="font-family:Courier;color:Orange; font-s
 col1, col2=st.columns([13,4])
 
 with col1:
-     placeholder = st.empty()
-     with placeholder.container():
-                with st.form(key='form', clear_on_submit=True):
-                        st.session_state['Message'] = st.text_input("Message:")
-                        button =st.form_submit_button("Send message")
+    placeholder = st.empty
+    with placeholder.container():
+        with st.form(key='form', clear_on_submit=True):
+                st.session_state['Message'] = st.text_input("Message:")
+                button =st.form_submit_button(label='Send message')
     if button:
         #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
         #come qui
