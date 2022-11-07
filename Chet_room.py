@@ -43,7 +43,6 @@ st.markdown("""
 
 .container{
   max-width: 400px;
-  border: 1px solid orange;
   border-radius: 5px;
   padding: 5px;
   word-wrap: break-word;
@@ -152,9 +151,9 @@ if not df.empty:
               <div class = "content">
                       %s
               </div>
-              <div class = "time %s %s">
+              <div class = "time %s">
                       %s
               </div>
             </div>
-            ''' % (border, change_side, color, series.at["User"], series.at["Content"], color, border, series.at["Time"])
+            ''' % (border, change_side, color, series.at["User"], series.at["Content"], color, series.at["Time"])
         st.markdown(message, unsafe_allow_html=True)
