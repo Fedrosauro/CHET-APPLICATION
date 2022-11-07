@@ -83,16 +83,14 @@ st.markdown("""
     color: orange;
 }
 
-.bordo_white{
+.border_white{
     border: 1px solid white;
-      border-radius: 5px;
-
+    border-radius: 5px;
 }
 
-.bordo_orange{
+.border_orange{
     border: 1px solid orange;
-      border-radius: 5px;
-
+    border-radius: 5px;
 }
 
 </style>
