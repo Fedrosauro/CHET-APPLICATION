@@ -40,6 +40,7 @@ st.markdown("""
 .big-font {
     font-size:80px !important;
 }
+
 .container{
   max-width: 400px;
   border: 1px solid orange;
@@ -54,29 +55,42 @@ st.markdown("""
   font-weight: bold;
   font-size: 15px;
   margin-bottom: 3px;
+  color:orange;
 }
 
 .time{
   font-size: 12px;
   text-align: right;
   margin-top: 3px;
+  color:orange;
+}
+
+.content{
+    color:white;
 }
 
 .change{
-    background-color: #37515F;
     float: right;
 }
 
 .no_change{
-    background-color: none;
+
+}
+
+.white{
+    color: white;
 }
 
 .orange{
     color: orange;
 }
 
-.white{
-    color: white;
+.bordo_white{
+    border: 1px solid white;
+}
+
+.bordo_orange{
+    border: 1px solid orange;
 }
 
 </style>
@@ -109,23 +123,25 @@ df= be.get_Database_dataFrame(supabase)
 if not df.empty:
     for x in reversed(range(len(df.index))):
         series = df.loc[x]
-        change_color = "no_change"
-        color = "white"
+        change_side = "no_change"
+        color = "orange"
+        border = "border_orange"
         if st.session_state["Username"][0] == series.at["User"]:
-            change_color = "change"
-            color = "orange"
+            change_side = "change"
+            color = "white"
+            border = "border_white"
 
         message = '''
-            <div class = "container %s">
+            <div class = "container %s %s">
               <div class = "user %s">
                       %s
               </div>
               <div class = "content">
                       %s
               </div>
-              <div class = "time">
+              <div class = "time %s">
                       %s
               </div>
             </div>
-            ''' % (change_color, color, series.at["User"], series.at["Content"], series.at["Time"])
+            ''' % (border, change_side, color series.at["User"], series.at["Content"], color, series.at["Time"])
         st.markdown(message, unsafe_allow_html=True)
