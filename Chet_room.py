@@ -190,7 +190,7 @@ with col2:
 
     st.write(tabs_font_css, unsafe_allow_html=True)
     with st.form("Elimina messaggi", clear_on_submit=False):
-                    elimina ='<p style="font-family:Courier;color:Orange; font-size: 15px;">Elimina messaggio /p>'
+                    elimina ='<p style="font-family:Courier;color:Orange; font-size: 15px;">Elimina messaggio/p>'
                     st.markdown(elimina, unsafe_allow_html=True)
                     st.session_state["User_to_delete"] = st.text_input("User")
                     st.session_state["Time_to_delete"] = st.text_input("Date")
