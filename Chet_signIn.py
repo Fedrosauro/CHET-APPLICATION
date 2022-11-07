@@ -41,7 +41,34 @@ def check_signin():
     else:
         st.error('Dati inseriti non corretti', icon="🚨")
 
-for i in range(10):
+tabs_font_css = """
+<style>
+div[class*="stTextInput"] label {
+  font-size: 20px;
+  font-family: "Courier New", monospace;
+  text-align: Center;
+  color: Orange;
+  
+}
+
+div[class*="stTextInput"] label {
+  font-size: 20px;
+  font-family:  "Courier New", monospace;
+  text-align: Center;
+  color: Orange;
+}
+
+div[class*="stTextInput"] label {
+  font-size: 20px;
+  font-family:  "Courier New", monospace;
+  text-align: Center;
+  color: Orange;
+}
+</style>
+"""
+st.write(tabs_font_css, unsafe_allow_html=True)
+        
+for i in range(5):
         st.write("")
 
 placeholder = st.empty()
