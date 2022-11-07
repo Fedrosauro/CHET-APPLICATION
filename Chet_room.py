@@ -12,7 +12,7 @@ import base64
 st.markdown("""
         <style>
                .css-1n76uvr {
-                    margin-top: -52px;
+                    margin-top: -53px;
                 }
         </style>
         """, unsafe_allow_html=True)
