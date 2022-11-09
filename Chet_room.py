@@ -125,6 +125,8 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 if st.experimental_get_query_params():
     value = st.experimental_get_query_params()["value"]
 st.session_state["Username"] = be.decode_string(value)
+st.write(st.session_state["Username"])
+
 
 st.markdown('<p class="big-font" style="font-family:Courier;color:Orange; font-size: 40px;">Chat </p>', unsafe_allow_html=True)
 
