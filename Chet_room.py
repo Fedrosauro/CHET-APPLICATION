@@ -149,7 +149,7 @@ with col1:
             color = "orange"
             border = "border_orange"
             speculare = "no_speculare"
-            if st.session_state["Username"][0] == series.at["User"]:
+            if st.session_state["Username"] == series.at["User"]:
                 change_side = "change"
                 color = "white"
                 border = "border_white"
