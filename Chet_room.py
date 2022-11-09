@@ -136,7 +136,7 @@ with col1:
     if button:
         #quando viene premuto il tasto invia messaggio deve essere invocata la funzione send message e successivamente svuotato st.session_state['Message']
         #come qui
-        if be.send_message(supabase, st.session_state['Username'][0] ,st.session_state['Message'], datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")):
+        if be.send_message(supabase, st.session_state['Username'] ,st.session_state['Message'], datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")):
             st.session_state['Message'] = ""
         else:
             st.error('Il messaggio non può essere vuoto', icon="🚨")
