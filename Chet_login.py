@@ -51,24 +51,25 @@ def check_login():
                       unsafe_allow_html=True
                 )
 
+        encoded_name = be.encode_string(st.session_state["Username"])
         if admin_value == True:
             chat_botton = st.write(f'''
-                          <a href="https://fedrosauro-chet-application-chet-room-akt1u6.streamlit.app/?user=%s">
+                          <a href="https://fedrosauro-chet-application-chet-room-akt1u6.streamlit.app/?value=%s">
                           <button>
                           VAI ALLA CHAT
                           </button>
                           </a>
-                          ''' % (st.session_state["Username"]),
+                          ''' % (encoded_name),
                           unsafe_allow_html=True
                           )
         else:
             chat_botton = st.write(f'''
-                          <a href="https://fedrosauro-chet-application-chet-room-users-kdnlq9.streamlit.app/?user=%s">
+                          <a href="https://fedrosauro-chet-application-chet-room-users-kdnlq9.streamlit.app/?value=%s">
                           <button>
                           VAI ALLA CHAT
                           </button>
                           </a>
-                          ''' % (st.session_state["Username"]),
+                          ''' % (encoded_name),
                           unsafe_allow_html=True
                           )
     else:
