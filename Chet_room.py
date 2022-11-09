@@ -131,9 +131,6 @@ st.markdown('<p class="big-font" style="font-family:Courier;color:Orange; font-s
 col1, col2=st.columns([13,4])
 
 with col1:
-    st.write(st.session_state["Username"])
-    st.write(st.experimental_get_query_params()["value"])
-
     st.session_state['Message'] = st.text_input("Message:")
     button = st.button("Send message")
     if button:
