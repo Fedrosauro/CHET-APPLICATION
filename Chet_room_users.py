@@ -1,10 +1,6 @@
 import streamlit as st
-import pandas as pd
-from streamlit_chat import message
 import backend as be
 from streamlit_autorefresh import st_autorefresh
-from urllib.parse import urlparse
-from urllib.parse import parse_qs
 import datetime
 import base64
 
