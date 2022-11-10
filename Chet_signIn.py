@@ -4,7 +4,7 @@ import Chet_login as cl
 
 supabase = be.init_connection()
 
-st.set_page_config( page_title="Sign in", layout="centered")
+st.set_page_config(page_title="CHET", page_icon="💬")
 
 cl.set_background('back3.png')
 
