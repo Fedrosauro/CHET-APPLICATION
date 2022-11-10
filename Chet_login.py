@@ -4,7 +4,7 @@ import base64
 
 supabase = be.init_connection()
 
-st.set_page_config( page_title="CHET", page_icon="💬",layout = centered)
+st.set_page_config(page_title="CHET", page_icon="💬")
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
