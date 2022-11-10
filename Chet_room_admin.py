@@ -4,7 +4,6 @@ from streamlit_autorefresh import st_autorefresh
 import datetime
 import Chet_login as cl
 
-st.set_page_config(page_title="CHET", page_icon="💬")
 #funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
 #(così le azioni come la stampa dei messaggi vedono i database aggiornati)
 st_autorefresh(interval=1000, key="dataframerefresh")
