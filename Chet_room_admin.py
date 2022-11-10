@@ -2,7 +2,7 @@ import streamlit as st
 import backend as be
 from streamlit_autorefresh import st_autorefresh
 import datetime
-import base64
+import Chet_login as cl
 
 st.markdown("""
         <style>
@@ -18,24 +18,7 @@ st_autorefresh(interval=1000, key="dataframerefresh")
 # funzione da invocare all'inizio per creare connessione al database
 supabase=be.init_connection()
 
-def get_base64(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-    <style>
-        .stApp {
-        background-image: url("data:image/png;base64,%s");
-        background-size: cover;
-        }
-    </style>
-    ''' % (bin_str)
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-set_background('back4.png')
+cl.set_background('back4.png')
 
 #CSS stuff
 st.markdown("""
