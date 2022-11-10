@@ -54,7 +54,7 @@ def check_login():
         encoded_name = be.encode_string(st.session_state["Username"])
         if admin_value == True:
             chat_botton = st.write(f'''
-                          <a href="https://fedrosauro-chet-application-chet-room-akt1u6.streamlit.app/?value=%s">
+                          <a href="https://fedrosauro-chet-application-chet-room-admin-7dtfqu.streamlit.app/?value=%s">
                           <button>
                           VAI ALLA CHAT
                           </button>
