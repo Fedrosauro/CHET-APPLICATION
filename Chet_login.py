@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 27 14:54:23 2022
-
-@author: simonecossaro
-"""
-
 import streamlit as st
 import backend as be
 import base64

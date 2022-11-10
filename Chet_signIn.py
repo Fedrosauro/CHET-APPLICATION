@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 25 21:51:50 2022
-
-@author: ludov
-"""
 import streamlit as st
 import backend as be
 import Chet_login as cl
@@ -48,7 +42,7 @@ div[class*="stTextInput"] label {
   font-family: "Courier New", monospace;
   text-align: Center;
   color: Orange;
-  
+
 }
 
 div[class*="stTextInput"] label {
@@ -67,7 +61,7 @@ div[class*="stTextInput"] label {
 </style>
 """
 st.write(tabs_font_css, unsafe_allow_html=True)
-        
+
 for i in range(5):
         st.write("")
 
