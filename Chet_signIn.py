@@ -56,11 +56,3 @@ with placeholder.container():
 
 if signin_button:
     check_signin()
-
-st.markdown("""
-        <style>
-               .block-container {
-                    padding-bottom: 0px;
-                }
-        </style>
-        """, unsafe_allow_html=True)

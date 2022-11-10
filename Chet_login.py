@@ -106,11 +106,3 @@ if b1:
     check_login()
 if b2:
     nav_to("https://fedrosauro-chet-application-chet-signin-jaygim.streamlitapp.com/")
-
-st.markdown("""
-        <style>
-               .block-container {
-                    padding-bottom: 0px;
-                }
-        </style>
-        """, unsafe_allow_html=True)

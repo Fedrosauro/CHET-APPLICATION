@@ -4,13 +4,6 @@ from streamlit_autorefresh import st_autorefresh
 import datetime
 import Chet_login as cl
 
-st.markdown("""
-        <style>
-               .css-1n76uvr {
-                    margin-top: -53px;
-                }
-        </style>
-        """, unsafe_allow_html=True)
 #funzione da invocare per far si che la pagina si aggiorni ogni 1000 millisecondi
 #(così le azioni come la stampa dei messaggi vedono i database aggiornati)
 st_autorefresh(interval=1000, key="dataframerefresh")
@@ -147,9 +140,6 @@ with col1:
                 </div>
                 ''' % (border, change_side, color, series.at["User"], speculare, series.at["Content"], color, series.at["Time"])
             st.markdown(message, unsafe_allow_html=True)
-
-
-
 
 with col2:
     tabs_font_css = """
