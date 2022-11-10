@@ -4,7 +4,6 @@ from streamlit_autorefresh import st_autorefresh
 import datetime
 import base64
 
-
 st.markdown("""
         <style>
                .css-1n76uvr {
