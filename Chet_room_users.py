@@ -11,7 +11,6 @@ st_autorefresh(interval=1000, key="dataframerefresh")
 # funzione da invocare all'inizio per creare connessione al database
 supabase=be.init_connection()
 
-st.set_page_config(page_title="CHET", page_icon="💬")
 cl.set_background('back4.png')
 
 #CSS stuff
