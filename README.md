@@ -1,6 +1,3 @@
-# CHET-APPLICATION
-Application project for 224MI
-
 <div align="center">
   <h1>CHET APP</h1>
   <img src="https://img.shields.io/badge/status-active-brightgreen"/>&nbsp;&nbsp;&nbsp;&nbsp;
