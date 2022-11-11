@@ -6,4 +6,8 @@
   <img src="https://img.shields.io/badge/safari-success-green?style=flat&logo=safari"/>
 </div>
 
+This is the application project for *INFORMATION SYSTEMS AND SOFTWARE DESIGN*  course. In particular we, as a team, have developed an **online global chat** in which all people with an existing account can write messages. 
+
+Having an account is required to send messages but don't worry if you don't have one, with the signin page you can make a new account and then use it.
+
 <p align="right"><img src="https://raw.githubusercontent.com/Fedrosauro/Images/main/Images/streamlitcloud_final.png"/></p>
