@@ -1,7 +1,7 @@
 # CHET-APPLICATION
 Application project for 224MI
 
-<p align="center">
+<p style="text-align: center;">
   <h1>CHET APP</h1>
   <hr>
   <img src="https://img.shields.io/badge/status-active-brightgreen"/>
