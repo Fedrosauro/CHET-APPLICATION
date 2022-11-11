@@ -8,7 +8,7 @@
 <br>
 <br>
 
-This is the application project for <i>INFORMATION SYSTEMS AND SOFTWARE DESIGN</i> course. In particular we, as a team, have developed an <b><u>online global chat</u></b> in which all people with an existing account can write messages.Having an account is required to send messages but don't worry if you don't have one, with the signin page you can make a new account and then use it.
+This is the application project for <i>INFORMATION SYSTEMS AND SOFTWARE DESIGN</i> course. In particular we, as a team, have developed an <b><u>online global chat</u></b> in which all people with an existing account can write messages. Having an account is required to send messages but don't worry if you don't have one, with the signin page you can make a new account and then use it.
 
 
 <br>
