@@ -40,7 +40,7 @@ This page is almost identical to the User Chat Room with one difference. The pag
 <br><br>
 
 <h2>Warnings ⚠️</h2>
-We strongly suggest <b>not to use personal passwords</b> of real accounts when doing the registration phase. Even tough we've provided some kind of security checks for the application, a well studied SQL Injection (for example) could breach into the database and grabs information from tables.
+We strongly suggest <b>not to use personal passwords</b> of real personal accounts when doing the registration phase. Even tough we've provided some kind of security checks for the application, a well studied SQL Injection (for example) could breach into the database and grabs information from tables.
 <br><br>
 
 <h2>Online Platform used</h2>
