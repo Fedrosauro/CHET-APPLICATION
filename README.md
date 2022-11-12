@@ -37,7 +37,12 @@ This page is almost identical to the User Chat Room with one difference. The pag
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. <b>Message column</b>: in which the admin can send messages in the chat
 <br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. <b>Delete message column</b>: in which the admin is able to delete messages from other users providing <code>username</code> and <code>time</code> of the message &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that he wants to delete
-<br>
-<br>
-<p align="right"><img src="https://github.com/Fedrosauro/Images/blob/main/Images/streamlit_cloud.png"/></p>
-<p align="right"><img src="https://github.com/Fedrosauro/Images/blob/main/Images/supabase_test.png"/></p>
+<br><br>
+
+<h2>Warnings ⚠️</h2>
+We strongly suggest <b>not to use personal passwords</b> of real accounts when doing the registration phase. Even tough we've provided some kind of security checks for the application, a well studied SQL Injection (for example) could breach into the database and grabs information from tables.
+<br><br>
+
+<h2>Online Platform used</h2>
+<p><img src="https://github.com/Fedrosauro/Images/blob/main/Images/streamlit_cloud3.png"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/Fedrosauro/Images/blob/main/Images/supabase_test.png"/></p>
