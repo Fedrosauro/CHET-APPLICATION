@@ -44,5 +44,5 @@ We strongly suggest <b>not to use personal passwords</b> of real accounts when d
 <br><br>
 
 <h2>Online Platform used</h2>
-<p><img src="https://github.com/Fedrosauro/Images/blob/main/Images/streamlit_cloud3.png"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://github.com/Fedrosauro/Images/blob/main/Images/supabase_test.png"/></p>
+<p><a href="https://streamlit.io/cloud"><img src="https://github.com/Fedrosauro/Images/blob/main/Images/streamlit_cloud3.png"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://supabase.com/"><img src="https://github.com/Fedrosauro/Images/blob/main/Images/supabase_test.png"/></a></p>
