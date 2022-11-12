@@ -36,7 +36,7 @@ This page is dedicated to the users that do not have the admin power. Therefore 
 This page is almost identical to the User Chat Room with one difference. The page is splitted in 2 columns:<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. <b>Message column</b>: in which the admin can send messages in the chat
 <br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. <b>Delete message column</b>: in which the admin is able to delete messages from other users providing <code>username</code> and <code>time</code> of the message &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that he wants to delete
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. <b>Delete message column</b>: in which the admin is able to delete messages from other users providing <code>username</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and <code>time</code> of the message that he wants to delete
 <br><br>
 
 <h2>Warnings ⚠️</h2>
